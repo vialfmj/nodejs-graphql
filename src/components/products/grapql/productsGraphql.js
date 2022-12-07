@@ -2,7 +2,7 @@
 const { buildSchema } = require('graphql');
 const ProductsDto = require('../dto/productsDto')
 
-
+// Esto lo podes separar a un archivo .schema para no tenerlo todo junto ;)
 let schema = buildSchema(`
     type Product {
         name: String!

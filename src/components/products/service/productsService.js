@@ -6,6 +6,8 @@ class ProductsService {
         let allProducts = await ProductsDto.getAll()
         return allProducts 
     }
+    // Bien la validacion, si queres sumarle todavia mas expertise,
+    // Fijate que mongoose ya te provee algunos metodos para validar el body antes de meterlo
     addProduct = async (product) => {
         const {name, price} = product
         try {

@@ -9,8 +9,8 @@ class ProductsController {
             console.log(error)
         }
     }
-    addProduct = async (req, res) => {
-        const {body} = req
+    // Esto tambien podes hacerlo de la siguiente forma:
+    addProduct = async({ body }, res) => {
         let response = await ProductsService.addProduct(body)
         res.json({ idNewProduct: response })
     }
